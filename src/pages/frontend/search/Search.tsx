@@ -7,8 +7,8 @@ import {
   fetchSearchResults,
 } from "../../../redux/slice/searchSlice";
 import { useNavigate } from "react-router-dom";
-import { truncateText } from "../../../components/cart/truncateText";
-import { calculateTimeAgo } from "../../../components/cart/calculateTimeAgo";
+import { truncateText } from "../../../utility/truncateText";
+import { calculateTimeAgo } from "../../../utility/calculateTimeAgo";
 import heart from "../../../assets/images/heartFill.svg";
 import download from "../../../assets/images/download.svg";
 import save from "../../../assets/images/save.svg";

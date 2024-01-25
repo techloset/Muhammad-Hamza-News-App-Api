@@ -4,7 +4,7 @@ import download from "../../assets/images/download.svg";
 import save from "../../assets/images/save.svg";
 import homeImg from "../../assets/images/home-img.png";
 import { SearchResponse } from "../../redux/slice/searchSlice";
-import { calculateTimeAgo } from "../cart/calculateTimeAgo";
+import { calculateTimeAgo } from "../../utility/calculateTimeAgo";
 import { mergeUrl } from "../../pages/frontend/search/Search";
 import crossImg from "../../assets/images/cross-icon.svg";
 

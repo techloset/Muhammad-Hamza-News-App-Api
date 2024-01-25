@@ -2,7 +2,7 @@ import React, { MouseEvent } from "react";
 import heart from "../../assets/images/heart.svg";
 import download from "../../assets/images/download.svg";
 import save from "../../assets/images/save.svg";
-import { calculateTimeAgo } from "../cart/calculateTimeAgo";
+import { calculateTimeAgo } from "../../utility/calculateTimeAgo";
 
 import crossImg from "../../assets/images/cross-icon.svg";
 import { Article } from "../../redux/slice/articleSlice";
