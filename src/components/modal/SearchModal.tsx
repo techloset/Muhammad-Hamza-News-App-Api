@@ -11,7 +11,7 @@ import crossImg from "../../assets/images/cross-icon.svg";
 interface ModalProps {
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-  article: SearchResponse | null; // Add article prop
+  article: SearchResponse | null; 
 }
 
 const SearchModal: React.FC<ModalProps> = (props) => {

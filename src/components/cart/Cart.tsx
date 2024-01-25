@@ -35,9 +35,9 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
 
    // Function to handle article clicks
    const handleArticleClick = (article: Article) => {
-    // Set the selected article when an article is clicked
+    
     setSelectedArticle(article);
-    // Open the modal
+   
     setShowModal(true);
   };
   
@@ -101,7 +101,7 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
   // Rendering the Cart component
   return (
     <>
-      {/* Cart items rendering */}
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] mx-auto xl:px-28 md:px-16 sm:px-10 px-4 gap-8">
         {articles &&
           articles
@@ -170,7 +170,7 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
               </div>
             ))}
       </div>
-      {/* "View More" button rendering */}
+      
       {categoryItemCount > displayCount && (
         <div className="my-10 flex justify-center">
           <Button text="View More" outline onClick={handleViewMore} />
