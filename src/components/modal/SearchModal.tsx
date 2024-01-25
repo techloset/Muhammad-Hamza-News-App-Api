@@ -88,7 +88,7 @@ const SearchModal: React.FC<ModalProps> = (props) => {
             </div>
           </div>
           <div
-            className="opacity-40 fixed inset-0 z-40 bg-black"
+            className="opacity-40 fixed inset-0 mt-[75px] z-40 bg-black"
             onClick={handleCloseModal}
           ></div>
         </>

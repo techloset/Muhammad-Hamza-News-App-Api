@@ -34,16 +34,13 @@ const Search: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<SearchResponse | null>(
     null
   );
-  const[error, setError] = useState<string | null>(null);
 
   const handleSearch = async () => {
     if (searchQuery.trim() !== "") {
       try {
         await dispatch(fetchSearchResults(searchQuery));
         navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-      } catch (error: string | any) {
-        setError(error.message);
-      }
+      } catch (error) {}
     } else {
       alert("Please enter a search query");
     }
@@ -207,18 +204,14 @@ const Search: React.FC = () => {
         )}
       </>
       {isError && (
-  <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
-    {isError === "Data not available" ? (
-      <p>Data is not available. Please try a different search query.</p>
-    ) : (
-      <>
-      <p>Error: {isError}</p>
-      <p>{error}</p>
-      </>
-    )}
-  </div>
-)}
-
+        <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
+          Error: {isError}
+        </div>
+      )} {isError && (
+        <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
+          Error: {isError}
+        </div>
+      )}
       {/* Modal */}
       <SearchModal
         showModal={showModal}
