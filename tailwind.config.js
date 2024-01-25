@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'ibm-serif': ['IBM Plex Serif', 'serif'],
-        'poppins': ['Poppins', 'sans-serif'],
-        'nunito-sans': ['Nunito Sans', 'sans-serif'],
+        'ibm-serif': ['IBM Plex Serif'],
+        'poppins': ['Poppins'],
+        'nunito-sans': ['Nunito Sans'],
       },
       
     },
