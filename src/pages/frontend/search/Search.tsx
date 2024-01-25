@@ -14,8 +14,7 @@ import download from "../../../assets/images/download.svg";
 import save from "../../../assets/images/save.svg";
 import Button from "../../../components/button/Button";
 import SearchModal from "../../../components/modal/SearchModal";
-import Navbar from "../../../components/navbar/Navbar";
-import Footer from "../../../components/footer/Footer";
+
 
 export function mergeUrl(baseUrl: string, relativePath: string) {
   const base = new URL(baseUrl);
@@ -77,7 +76,7 @@ const Search: React.FC = () => {
 
   return (
     <>
-    <Navbar/>
+
       <div className="flex flex-col justify-center items-center h-[80vh] gap-12">
         <div className="text-zinc-800 text-3xl md:text-4xl lg:text-5xl font-ibm-serif font-semibold">
           Search News
@@ -183,11 +182,15 @@ const Search: React.FC = () => {
                       <div className="flex justify-center items-center my-3 gap-5">
                         <div className="flex gap-1">
                           <img src={heart} alt="" />
-                          <p className="text-zinc-800 text-[10px] font-poppins font-medium">28</p>
+                          <p className="text-zinc-800 text-[10px] font-poppins font-medium">
+                            28
+                          </p>
                         </div>
                         <div className="flex gap-1">
                           <img src={download} width={13} alt="" />
-                          <p className="text-zinc-800 text-[10px] font-poppins font-medium">72</p>
+                          <p className="text-zinc-800 text-[10px] font-poppins font-medium">
+                            72
+                          </p>
                         </div>
                         <div>
                           <img src={save} width={13} alt="" />
@@ -210,7 +213,8 @@ const Search: React.FC = () => {
         <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
           Error: {isError}
         </div>
-      )} {isError && (
+      )}{" "}
+      {isError && (
         <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
           Error: {isError}
         </div>
@@ -221,7 +225,7 @@ const Search: React.FC = () => {
         setShowModal={setShowModal}
         article={selectedArticle}
       />
-      <Footer/>
+      
     </>
   );
 };
