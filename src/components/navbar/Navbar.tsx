@@ -1,53 +1,50 @@
-import React from "react";
-import logo from "../../assets/logo.png";
-import forward from "../../assets/forward-icon.png";
-import people from "../../assets/people-icon.png";
-import search from "../../assets/search-icon.png";
-import menu from "../../assets/menu-icon.png";
+import Container from "../container/Container";
+import logo from "../../assets/images/logo.png";
+import forward from "../../assets/images/forward-icon.svg";
+import people from "../../assets/images/people-icon.svg";
+import search from "../../assets/images/search-icon.svg";
+import menu from "../../assets/images/menu-icon.svg";
+import { Link } from "react-router-dom";
 
-
+// Functional component for the Navbar
 const Navbar = () => {
   return (
-    <>
-      <div
-        className="w-full 
-        h-20 
-      bg-white px-32
-        flex 
-        items-center 
-        justify-between 
-        bg-opacity-90 
-        backdrop-blur-[28px] "
-      >
-        <div>
-          <img className="w-[62.79px] h-[52px]" alt="" src={logo} />
-        </div>
-        <div className="flex items-center gap-10 text-zinc-800 text-base font-semibold font-['Nunito Sans']">
-          <div className="hidden md:block">Corona Update</div>
-          <div className="hidden md:block">Politics</div>
-          <div className="hidden md:block">Buisness</div>
-          <div className="hidden md:block">Sports</div>
-          <div className="hidden md:block">World</div>
-          <div className="hidden md:block">Travel</div>
-          <div className="hidden md:block">Products</div>
-          <div className="hidden md:block">
-            <img src={forward} alt="forward-icon" />
+    <div className="sticky top-0 w-full bg-white z-30 shadow-md">
+      <div className="py-4 border-b-[1px]">
+        <Container>
+          <div className="flex items-center justify-between px-4 md:px-0">
+            <Link to={"/"}>
+              <img className="w-[49.33px] h-10" alt="" src={logo} />
+            </Link>
+            <div className="hidden lg:block">
+              <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 text-zinc-800 text-base font-semibold font-nunito-sans">
+                <li>Corona Update</li>
+                <li>Politics</li>
+                <li>Buisness</li>
+                <li>Sports</li>
+                <li>World</li>
+                <li>Travel</li>
+                <li>Products</li>
+                <li>
+                  <img alt="" src={forward} />
+                </li>
+              </ul>
+            </div>
+            <div className="flex gap-6">
+              <div>
+                <img src={people} alt="peole-icon" />
+              </div>
+              <Link to={"/search"}>
+                <img src={search} alt="search-icon" />
+              </Link>
+              <div>
+                <img src={menu} alt="menu" />
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="flex gap-6">
-          <div>
-            <img src={people} alt="peole-icon" />
-          </div>
-          <div>
-            <img src={search} alt="search-icon" />
-          </div>
-          <div>
-            <img src={menu} alt="menu" />
-          </div>
-        </div>
+        </Container>
       </div>
-    </>
+    </div>
   );
 };
 

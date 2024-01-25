@@ -4,7 +4,14 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
 ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'ibm-serif': ['IBM Plex Serif', 'serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'nunito-sans': ['Nunito Sans', 'sans-serif'],
+      },
+      
+    },
   },
   plugins: [],
 }
