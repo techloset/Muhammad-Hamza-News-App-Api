@@ -17,7 +17,7 @@ const Navbar = () => {
               <img className="w-[49.33px] h-10" alt="" src={logo} />
             </Link>
             <div className="hidden lg:block">
-              <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 text-zinc-800 text-base font-semibold font-nunito-sans">
+              <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-14 text-zinc-800 text-base font-semibold font-nunito-sans">
                 <li>Corona Update</li>
                 <li>Politics</li>
                 <li>Buisness</li>

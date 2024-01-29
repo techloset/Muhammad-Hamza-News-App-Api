@@ -6,7 +6,7 @@
 
 /* Firefox scrollbar */
 * {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: transparent transparent;
 }
 

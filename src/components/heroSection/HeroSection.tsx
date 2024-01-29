@@ -6,6 +6,7 @@ import Container from "../container/Container";
 import Button from "../button/Button";
 
 const HeroSection = () => {
+  
   return (
     <>
       <Container>
@@ -19,7 +20,7 @@ const HeroSection = () => {
           <div className="max-w-auto md:ml-16">
             <div className="hidden md:block">
               <div className="flex items-center justify-between">
-                <div className="text-red-700 text-sm font-semibold font-['Poppins'] leading-[29.40px] tracking-tight">
+                <div className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
                   Trending
                 </div>
                 <div className="flex gap-4">

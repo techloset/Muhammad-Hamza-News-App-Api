@@ -2,10 +2,7 @@
 import React, { useEffect, useState } from "react";
 import searchImg from "../../../assets/images/search-icon.svg";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import {
-  SearchResponse,
-  fetchSearchResults,
-} from "../../../redux/slice/searchSlice";
+import {SearchResponse, fetchSearchResults} from "../../../redux/slice/searchSlice";
 import { useNavigate } from "react-router-dom";
 import { truncateText } from "../../../utility/truncateText";
 import { calculateTimeAgo } from "../../../utility/calculateTimeAgo";

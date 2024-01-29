@@ -4,7 +4,7 @@ import FooterList from "./FooterList";
 import logo from "../../assets/images/logo2.png";
 import wifi from "../../assets/images/wifi.png";
 import twitter from "../../assets/images/twitter.png";
-import baby from "../../assets/images/baby.png";
+import reddit from "../../assets/images/reddit.png";
 import facebook from "../../assets/images/facebook.png";
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
               <div className="flex gap-7">
                 <img className="w-7 h-7" src={wifi} alt="wifi" />
                 <img className="w-7 h-7" src={twitter} alt="wifi" />
-                <img className="w-7 h-7" src={baby} alt="wifi" />
+                <img className="w-7 h-7" src={reddit} alt="wifi" />
                 <img className="w-7 h-7" src={facebook} alt="wifi" />
               </div>
             </div>
