@@ -17,7 +17,6 @@ const CartSection: React.FC = () => {
   };
 
   useEffect(() => {
-    // Update category item count when articles change
     if (articles) {
       const categoryArticles = articles.filter(
         (article: Article) => article.section.toLowerCase() === selectedCategory
@@ -63,7 +62,7 @@ const CartSection: React.FC = () => {
             U.S
           </div>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block cursor-pointer">
           <img src={menu2} alt="" />
         </div>
       </div>

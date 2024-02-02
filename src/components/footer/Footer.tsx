@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col items-center lg:items-start lg:flex-row justify-between pt-16 pb-8">
           <FooterList>
             <div className="flex flex-col items-center gap-3 lg:gap-7">
-              <div>
+              <div className="cursor-pointer">
                 <img src={logo} alt="" />
               </div>
               <div className="text-gray-400 text-xs font-normal">
@@ -23,13 +23,12 @@ const Footer = () => {
             </div>
           </FooterList>
 
-            <div className="hidden lg:block text-[15px]">
-              <h3>Privacy Policy</h3>
-              <h3>Do not sell my personal info</h3>
-              <h3>Terms of Service</h3>
-              <h3>nbcnews.com Site Map</h3>
-            </div>
-          
+          <div className="hidden lg:block text-[15px]">
+            <h3>Privacy Policy</h3>
+            <h3>Do not sell my personal info</h3>
+            <h3>Terms of Service</h3>
+            <h3>nbcnews.com Site Map</h3>
+          </div>
 
           <FooterList>
             <div className="flex flex-col text-[15px] items-center lg:items-end lg:mr-20 gap-4 lg:gap-7">
@@ -40,10 +39,22 @@ const Footer = () => {
                 <div>Coupons</div>
               </div>
               <div className="flex gap-7">
-                <img className="w-7 h-7" src={wifi} alt="wifi" />
-                <img className="w-7 h-7" src={twitter} alt="wifi" />
-                <img className="w-7 h-7" src={reddit} alt="wifi" />
-                <img className="w-7 h-7" src={facebook} alt="wifi" />
+                <img className="w-7 h-7 cursor-pointer" src={wifi} alt="wifi" />
+                <img
+                  className="w-7 h-7 cursor-pointer"
+                  src={twitter}
+                  alt="wifi"
+                />
+                <img
+                  className="w-7 h-7 cursor-pointer"
+                  src={reddit}
+                  alt="wifi"
+                />
+                <img
+                  className="w-7 h-7 cursor-pointer"
+                  src={facebook}
+                  alt="wifi"
+                />
               </div>
             </div>
           </FooterList>

@@ -6,16 +6,16 @@ import Container from "../container/Container";
 import Button from "../button/Button";
 
 const HeroSection = () => {
-  
   return (
     <>
       <Container>
         <div className="grid md:grid-cols-2 my-0 md:my-10 items-center relative">
-          {/* Gradient overlay for medium screens */}
           <div className="md:hidden absolute inset-0 bg-gradient-to-b from-transparent to-zinc-800"></div>
-
-          {/* Image section with dynamic size based on screen width */}
-          <img className="w-full h-[372px] md:h-[500px] rounded-md aspect-square" alt="" src={homeImg} />
+          <img
+            className="w-full  rounded-md object-contain"
+            alt=""
+            src={homeImg}
+          />
 
           <div className="max-w-auto md:ml-16">
             <div className="hidden md:block">
@@ -24,9 +24,14 @@ const HeroSection = () => {
                   Trending
                 </div>
                 <div className="flex gap-4">
-                  <img src={heart} height={44} alt="heart-icon" />
-                  <img src={download} alt="" />
-                  <img src={save} alt="" />
+                  <img
+                    className="cursor-pointer"
+                    src={heart}
+                    height={44}
+                    alt="heart-icon"
+                  />
+                  <img className="cursor-pointer" src={download} alt="" />
+                  <img className="cursor-pointer" src={save} alt="" />
                 </div>
               </div>
             </div>
@@ -47,12 +52,8 @@ const HeroSection = () => {
             </div>
             <div className="hidden md:block">
               <div className="flex gap-5 text-zinc-800 text-[13px] font-normal leading-snug">
-                <p className="">
-                  2 hours ago
-                </p>
-                <div className="opacity-70">
-                  By Lucy Hiddleston | 4min read
-                </div>
+                <p className="">2 hours ago</p>
+                <div className="opacity-70">By Lucy Hiddleston | 4min read</div>
               </div>
             </div>
           </div>

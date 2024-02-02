@@ -28,25 +28,20 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
     isError,
   } = useAppSelector((state) => state.article);
 
-  // Fetching articles from the API
   useEffect(() => {
     dispatch(fetchArticles());
   }, [dispatch]);
 
-   // Function to handle article clicks
-   const handleArticleClick = (article: Article) => {
-    
+  const handleArticleClick = (article: Article) => {
     setSelectedArticle(article);
-   
+
     setShowModal(true);
   };
-  
-  // "View More" button handler
+
   const handleViewMore = () => {
     setDisplayCount((prevCount) => prevCount + 6);
   };
 
-  // Filtering articles based on the selected category
   const filterArticles = (article: Article) => {
     switch (selectedCategory) {
       case "latest":
@@ -82,8 +77,7 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
             xmlns="http://www.w3.org/2000/svg"
             className="animate-spin w-20 h-20 stroke-black"
           >
-            <path d="M12 3v3m6.366-.366-2.12 2.12M21 12h-3m.366 6.366-2.12-2.12M12 21v-3m-6.366.366 2.12-2.12M3 12h3m-.366-6.366 2.12 2.12">
-            </path>
+            <path d="M12 3v3m6.366-.366-2.12 2.12M21 12h-3m.366 6.366-2.12-2.12M12 21v-3m-6.366.366 2.12-2.12M3 12h3m-.366-6.366 2.12 2.12"></path>
           </svg>
         </div>
       </div>
@@ -98,10 +92,8 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
     );
   }
 
-  // Rendering the Cart component
   return (
     <>
-    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] mx-auto xl:px-28 md:px-16 sm:px-10 px-4 gap-8">
         {articles &&
           articles
@@ -156,11 +148,15 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
                   <div className="flex justify-center items-center my-3 gap-5">
                     <div className="flex gap-1">
                       <img src={heart} alt="" />
-                      <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">28</p>
+                      <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">
+                        28
+                      </p>
                     </div>
                     <div className="flex gap-1">
                       <img src={download} width={13} alt="" />
-                      <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">72</p>
+                      <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">
+                        72
+                      </p>
                     </div>
                     <div>
                       <img src={save} width={13} alt="" />
@@ -170,13 +166,17 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
               </div>
             ))}
       </div>
-      
+
       {categoryItemCount > displayCount && (
         <div className="my-10 flex justify-center">
           <Button text="View More" outline onClick={handleViewMore} />
         </div>
       )}
-      <ArticleModal showModal={showModal} setShowModal={setShowModal} article={selectedArticle}/>
+      <ArticleModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        article={selectedArticle}
+      />
     </>
   );
 };

@@ -11,7 +11,7 @@ import crossImg from "../../assets/images/crossIcon.svg";
 interface ModalProps {
   showModal: boolean;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-  article: SearchResponse | null; 
+  article: SearchResponse | null;
 }
 
 const SearchModal: React.FC<ModalProps> = (props) => {
@@ -39,7 +39,7 @@ const SearchModal: React.FC<ModalProps> = (props) => {
             >
               <div className="grid md:grid-cols-2 pt-8 px-4 md:p-8 items-center">
                 <div
-                  className="absolute top-1 right-1 md:top-0 md:right-0 opacity-70 w-6 md:w-10"
+                  className="absolute top-1 right-1 md:top-0 md:right-0 opacity-70 w-6 md:w-10 cursor-pointer"
                   onClick={handleCloseModal}
                 >
                   <img src={crossImg} alt="" />
@@ -59,11 +59,16 @@ const SearchModal: React.FC<ModalProps> = (props) => {
                       Trending
                     </div>
                     <div className="hidden md:block">
-                    <div className="flex gap-4">
-                      <img src={heart} height={44} alt="heart-icon" />
-                      <img src={download} alt="" />
-                      <img src={save} alt="" />
-                    </div>
+                      <div className="flex gap-4">
+                        <img
+                          className="cursor-pointer"
+                          src={heart}
+                          height={44}
+                          alt="heart-icon"
+                        />
+                        <img className="cursor-pointer" src={download} alt="" />
+                        <img className="cursor-pointer" src={save} alt="" />
+                      </div>
                     </div>
                   </div>
                   <div className="text-2xl md:text-[20px] lg:text-[32px] text-black font-semibold my-3 font-ibm-serif md:mr-9">

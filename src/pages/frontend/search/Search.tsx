@@ -1,8 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import searchImg from "../../../assets/images/searchIcon.svg";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import {SearchResponse, fetchSearchResults} from "../../../redux/slice/searchSlice";
+import { SearchResponse,fetchSearchResults } from "../../../redux/slice/searchSlice";
 import { useNavigate } from "react-router-dom";
 import { truncateText } from "../../../utility/truncateText";
 import { calculateTimeAgo } from "../../../utility/calculateTimeAgo";
@@ -11,7 +10,6 @@ import download from "../../../assets/images/download.svg";
 import save from "../../../assets/images/save.svg";
 import Button from "../../../components/button/Button";
 import SearchModal from "../../../components/modal/SearchModal";
-
 
 export function mergeUrl(baseUrl: string, relativePath: string) {
   const base = new URL(baseUrl);
@@ -43,13 +41,12 @@ const Search: React.FC = () => {
       alert("Please enter a search query");
     }
   };
-  // Function to handle article clicks
+
   const handleArticleClick = (article: SearchResponse) => {
     setSelectedArticle(article);
     setShowModal(true);
   };
 
-  // "View More" button handler
   const handleViewMore = () => {
     setDisplayCount((prevCount) => prevCount + 6);
   };
@@ -73,7 +70,6 @@ const Search: React.FC = () => {
 
   return (
     <>
-
       <div className="flex flex-col justify-center items-center h-[80vh] gap-12">
         <div className="text-zinc-800 text-3xl md:text-4xl lg:text-5xl font-ibm-serif font-semibold">
           Search News
@@ -85,7 +81,7 @@ const Search: React.FC = () => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-70 sm:w-[400px] md:w-[550px] lg:w-[800px] py-4 bg-white bg-opacity-90 pr-4 pl-14 border-slate-400 text-zinc-800 font-nunito-sans focus:border-slate-300"
+            className="w-70 sm:w-[400px] md:w-[550px] lg:w-[800px] py-4 bg-white bg-opacity-90 pr-4 pl-14 cursor-pointer border-slate-400 text-zinc-800 font-nunito-sans focus:border-slate-300"
           />
           <img
             className="absolute left-4 top-1/2 transform -translate-y-1/2"
@@ -96,7 +92,6 @@ const Search: React.FC = () => {
           />
         </form>
       </div>
-
       {isLoading && (
         <div className="flex justify-center items-center h-[70vh] bg-transparent">
           <div aria-label="Loading..." role="status">
@@ -199,7 +194,7 @@ const Search: React.FC = () => {
             </div>
           </>
         )}
-        {/* "View More" button rendering */}
+
         {searchResults && searchResults.length > displayCount && (
           <div className="my-10 flex justify-center">
             <Button text="View More" outline onClick={handleViewMore} />
@@ -216,13 +211,11 @@ const Search: React.FC = () => {
           Error: {isError}
         </div>
       )}
-      {/* Modal */}
       <SearchModal
         showModal={showModal}
         setShowModal={setShowModal}
         article={selectedArticle}
       />
-      
     </>
   );
 };

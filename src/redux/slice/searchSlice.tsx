@@ -1,7 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import axios, { AxiosResponse } from 'axios';
-
-
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios, { AxiosResponse } from "axios";
 
 export interface SearchState {
   searchResults: SearchResponse[] | null;
@@ -12,7 +10,7 @@ export interface SearchState {
 const initialState: SearchState = {
   searchResults: null,
   isLoading: false,
-  isError: "",
+  isError: ""
 };
 
 export interface SearchResponse {
@@ -24,15 +22,15 @@ export interface SearchResponse {
   byline: { original: string };
 }
 
-
 export const fetchSearchResults = createAsyncThunk<SearchResponse[], string>(
-  'search/fetchSearchResults',
+  "search/fetchSearchResults",
   async (searchQuery: string) => {
     try {
-      const responseData: AxiosResponse<{ response: { docs: SearchResponse[] } }> =
-        await axios.get(
-          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchQuery}&api-key=SGAGNWswD7NBONf4JPcqYJoC6e07Tzw1`
-        );
+      const responseData: AxiosResponse<{
+        response: { docs: SearchResponse[] };
+      }> = await axios.get(
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchQuery}&api-key=SGAGNWswD7NBONf4JPcqYJoC6e07Tzw1`
+      );
 
       return responseData.data.response.docs;
     } catch (error) {
@@ -41,28 +39,25 @@ export const fetchSearchResults = createAsyncThunk<SearchResponse[], string>(
   }
 );
 
-
 export const searchSlice = createSlice({
-  name: 'search',
+  name: "search",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-      builder
-          .addCase(fetchSearchResults.pending, (state) => {
-              state.isLoading = true;
-          })
-          .addCase(fetchSearchResults.fulfilled, (state, action) => {
-              state.isLoading = false;
-              state.isError = null;
-              state.searchResults = action.payload;
-          })
-          .addCase(fetchSearchResults.rejected, (state, action) => {
-              state.isLoading = false;
-              state.isError = action.error.message || "Something went wrong";
-          });
+    builder
+      .addCase(fetchSearchResults.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchSearchResults.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = null;
+        state.searchResults = action.payload;
+      })
+      .addCase(fetchSearchResults.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = action.error.message || "Something went wrong";
+      });
   },
 });
-
-
 
 export default searchSlice.reducer;
