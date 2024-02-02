@@ -4,7 +4,7 @@ import download from "../../assets/images/download.svg";
 import save from "../../assets/images/save.svg";
 import { calculateTimeAgo } from "../../utility/calculateTimeAgo";
 
-import crossImg from "../../assets/images/cross-icon.svg";
+import crossImg from "../../assets/images/crossIcon.svg";
 import { Article } from "../../redux/slice/articleSlice";
 
 

@@ -2,11 +2,11 @@ import React, { MouseEvent } from "react";
 import heart from "../../assets/images/heart.svg";
 import download from "../../assets/images/download.svg";
 import save from "../../assets/images/save.svg";
-import homeImg from "../../assets/images/home-img.png";
+import homeImg from "../../assets/images/homeImg.png";
 import { SearchResponse } from "../../redux/slice/searchSlice";
 import { calculateTimeAgo } from "../../utility/calculateTimeAgo";
 import { mergeUrl } from "../../pages/frontend/search/Search";
-import crossImg from "../../assets/images/cross-icon.svg";
+import crossImg from "../../assets/images/crossIcon.svg";
 
 interface ModalProps {
   showModal: boolean;

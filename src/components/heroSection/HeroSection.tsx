@@ -1,5 +1,5 @@
 import heart from "../../assets/images/heart.svg";
-import homeImg from "../../assets/images/home-img.png";
+import homeImg from "../../assets/images/homeImg.png";
 import download from "../../assets/images/download.svg";
 import save from "../../assets/images/save.svg";
 import Container from "../container/Container";

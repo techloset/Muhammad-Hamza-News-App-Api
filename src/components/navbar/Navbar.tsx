@@ -1,9 +1,9 @@
 import Container from "../container/Container";
 import logo from "../../assets/images/logo.png";
-import forward from "../../assets/images/forward-icon.svg";
-import people from "../../assets/images/people-icon.svg";
-import search from "../../assets/images/search-icon.svg";
-import menu from "../../assets/images/menu-icon.svg";
+import forward from "../../assets/images/forwardIcon.svg";
+import people from "../../assets/images/peopleIcon.svg";
+import search from "../../assets/images/searchIcon.svg";
+import menu from "../../assets/images/menuIcon.svg";
 import { Link } from "react-router-dom";
 
 // Functional component for the Navbar
