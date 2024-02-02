@@ -1,4 +1,3 @@
-// Function to calculate time ago
 export const calculateTimeAgo = (publishedDate: string) => {
     const currentDateTime = new Date();
     const publishedDateTime = new Date(publishedDate);

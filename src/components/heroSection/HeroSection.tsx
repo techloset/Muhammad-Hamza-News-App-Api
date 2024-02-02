@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className="grid md:grid-cols-2 my-0 md:my-10 items-center relative">
           <div className="md:hidden absolute inset-0 bg-gradient-to-b from-transparent to-zinc-800"></div>
           <img
-            className="w-full  rounded-md object-contain"
+            className="w-full  rounded-md object-cover"
             alt=""
             src={homeImg}
           />
