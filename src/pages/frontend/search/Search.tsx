@@ -224,7 +224,7 @@ const Search: React.FC = () => {
       )}
       {!isError && searchResults && searchResults.length === 0 && (
         <div className="flex justify-center items-center h-[70vh] text-4xl text-red-600 bg-transparent">
-          No data found.
+          data not found...
         </div>
       )}
       <SearchModal
