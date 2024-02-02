@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import searchImg from "../../../assets/images/searchIcon.svg";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { SearchResponse,fetchSearchResults } from "../../../redux/slice/searchSlice";
+import {
+  SearchResponse,
+  fetchSearchResults,
+} from "../../../redux/slice/searchSlice";
 import { useNavigate } from "react-router-dom";
 import { truncateText } from "../../../utility/truncateText";
 import { calculateTimeAgo } from "../../../utility/calculateTimeAgo";
@@ -30,17 +33,25 @@ const Search: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<SearchResponse | null>(
     null
   );
-
+  
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const queryParam = urlSearchParams.get("q");
   const handleSearch = async () => {
     if (searchQuery.trim() !== "") {
       try {
-        await dispatch(fetchSearchResults(searchQuery));
         navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       } catch (error) {}
     } else {
       alert("Please enter a search query");
     }
   };
+  useEffect(() => {
+    if (queryParam && queryParam.trim() !== "") {
+      dispatch(fetchSearchResults(queryParam));
+    } else {
+      navigate("/search");
+    }
+  }, [queryParam]);
 
   const handleArticleClick = (article: SearchResponse) => {
     setSelectedArticle(article);
@@ -209,6 +220,11 @@ const Search: React.FC = () => {
       {isError && (
         <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
           Error: {isError}
+        </div>
+      )}
+      {!isError && searchResults && searchResults.length === 0 && (
+        <div className="flex justify-center items-center h-[70vh] text-4xl text-red-600 bg-transparent">
+          No data found.
         </div>
       )}
       <SearchModal
