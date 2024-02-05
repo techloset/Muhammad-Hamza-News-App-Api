@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
-import searchImg from "../../../assets/images/searchIcon.svg";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import searchImg from "../../assets/images/searchIcon.svg";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import {
   SearchResponse,
   fetchSearchResults,
-} from "../../../redux/slice/searchSlice";
+} from "../../redux/slice/searchSlice";
 import { useNavigate } from "react-router-dom";
-import { truncateText } from "../../../utility/truncateText";
-import { calculateTimeAgo } from "../../../utility/calculateTimeAgo";
-import heart from "../../../assets/images/heartFill.svg";
-import download from "../../../assets/images/download.svg";
-import save from "../../../assets/images/save.svg";
-import Button from "../../../components/button/Button";
-import SearchModal from "../../../components/modal/SearchModal";
+import { truncateText } from "../../utility/truncateText";
+import { calculateTimeAgo } from "../../utility/calculateTimeAgo";
+
+import heart from '../../assets/images/heart.svg'
+import download from "../../assets/images/download.svg";
+import save from "../../assets/images/save.svg";
+import Button from "../../components/button/Button";
+import SearchModal from "../../components/modal/SearchModal";
 
 export function mergeUrl(baseUrl: string, relativePath: string) {
   const base = new URL(baseUrl);

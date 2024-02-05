@@ -5,7 +5,7 @@ import save from "../../assets/images/save.svg";
 import homeImg from "../../assets/images/homeImg.png";
 import { SearchResponse } from "../../redux/slice/searchSlice";
 import { calculateTimeAgo } from "../../utility/calculateTimeAgo";
-import { mergeUrl } from "../../pages/frontend/search/Search";
+import { mergeUrl } from "../../pages/search/Search";
 import crossImg from "../../assets/images/crossIcon.svg";
 
 interface ModalProps {

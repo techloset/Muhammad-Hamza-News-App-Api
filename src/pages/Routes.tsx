@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./frontend/home/Home";
-import Search from "./frontend/search/Search";
-import PageNotFound from "./frontend/notFound/PageNotFound";
+import Home from "./home/Home";
+import Search from "./search/Search";
+import PageNotFound from "./notFound/PageNotFound";
 
 const Routing = () => {
   return (
