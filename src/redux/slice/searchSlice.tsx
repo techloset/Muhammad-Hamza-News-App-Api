@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosError, AxiosResponse } from "axios";
+import Instance from "../../instance/Instance";
 
 export interface SearchState {
   searchResults: SearchResponse[] | null;
@@ -20,6 +21,7 @@ export interface SearchResponse {
   abstract: string;
   pub_date: string;
   byline: { original: string };
+  error: string;
 }
 
 export const fetchSearchResults = createAsyncThunk<SearchResponse[], string>(
@@ -28,15 +30,16 @@ export const fetchSearchResults = createAsyncThunk<SearchResponse[], string>(
     try {
       const responseData: AxiosResponse<{
         response: { docs: SearchResponse[] };
-      }> = await axios.get(
-        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchQuery}&api-key=SGAGNWswD7NBONf4JPcqYJoC6e07Tzw1`
-      );
-
+      }> = await Instance.get("/search/v2/articlesearch.json", {
+        params: {
+          q: searchQuery,
+        },
+      });
       return responseData.data.response.docs;
-    } catch (error) {
-      throw error;
-    }
+    } catch (error: any) {
+      throw new Error(error?.message || "Something went wrong");
   }
+}
 );
 
 export const searchSlice = createSlice({

@@ -124,7 +124,7 @@ const Search: React.FC = () => {
           </div>
         </div>
       )}
-      <>
+    
         {!isLoading && !isError && searchResults && (
           <>
             <div className="flex justify-between items-center h-[54px] bg-white mb-3 max-w-[1920px] mx-0 xl:mx-28 md:mx-16 px-3 bg-opacity-90 backdrop-blur-[28px]">
@@ -212,12 +212,8 @@ const Search: React.FC = () => {
             <Button text="View More" outline onClick={handleViewMore} />
           </div>
         )}
-      </>
-      {isError && (
-        <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
-          Error: {isError}
-        </div>
-      )}{" "}
+   
+      
       {isError && (
         <div className="flex justify-center items-center h-[70vh] text-2xl text-red-500 bg-transparent">
           Error: {isError}

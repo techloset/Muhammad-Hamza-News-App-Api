@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import axios, { AxiosResponse } from "axios";
+import Instance from "../../instance/Instance";
 
 export interface articleState {
   data: Article[] | null;
@@ -33,10 +34,12 @@ export interface Article {
 export const fetchArticles = createAsyncThunk(
   "article/fetchArticles",
   async () => {
-    const response: AxiosResponse<{ results: Article[] }> = await axios.get(
-      "https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=SGAGNWswD7NBONf4JPcqYJoC6e07Tzw1"
-    );
-    return response.data.results;
+    try {
+      const response: AxiosResponse<{ results: Article[] }> = await Instance.get("/mostpopular/v2/viewed/30.json");
+      return response.data.results;
+    } catch (error: any) {
+      throw new Error(error?.message || "Something went wrong");
+    }
   }
 );
 
