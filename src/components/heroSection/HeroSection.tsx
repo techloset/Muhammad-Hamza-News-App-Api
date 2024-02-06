@@ -20,9 +20,9 @@ const HeroSection = () => {
           <div className="max-w-auto md:ml-16">
             <div className="hidden md:block">
               <div className="flex items-center justify-between">
-                <div className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
+                <p className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
                   Trending
-                </div>
+                </p>
                 <div className="flex gap-4">
                   <img
                     className="cursor-pointer"
@@ -42,24 +42,24 @@ const HeroSection = () => {
               </h1>
             </div>
             <div className="hidden md:block">
-              <div className="text-[15px] font-normal font-poppins my-3 leading-normal md:mr-16">
+              <p className="text-[15px] font-normal font-poppins my-3 leading-normal md:mr-16">
                 Earlier this month, a viral video depicting hyper-realistic
                 cakes as everyday items had folks on social media
                 double-guessing every other post, and sometimes even their own
                 realities, effectively launching the next meme : “Is this real
                 or is this cake?”
-              </div>
+              </p>
             </div>
             <div className="hidden md:block">
               <div className="flex gap-5 text-zinc-800 text-[13px] font-normal leading-snug">
                 <p className="">2 hours ago</p>
-                <div className="opacity-70">By Lucy Hiddleston | 4min read</div>
+                <p className="opacity-70">By Lucy Hiddleston | 4min read</p>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8 pt-6 md:py-3 my-0 md:my-11 bg-red-700">
-          <Button text="Breaking News" onClick={() => {}} />
+          <Button text="Breaking News" />
           <p className="text-white text-center px-6 text-xl font-medium font-poppins pb-8 md:pb-0">
             Kanye West says he's running for president in 2020.
           </p>

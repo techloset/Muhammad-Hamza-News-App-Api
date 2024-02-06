@@ -47,7 +47,7 @@ const SearchModal: React.FC<ModalProps> = (props) => {
 
                 <img
                   className="w-full rounded-md h-60 md:h-96 object-cover"
-                  alt=""
+                  alt="artical image"
                   src={mergeUrl(
                     "https://static01.nyt.com/",
                     article?.multimedia?.[0]?.url ?? homeImg
@@ -55,9 +55,9 @@ const SearchModal: React.FC<ModalProps> = (props) => {
                 />
                 <div className="relative max-w-auto my-5 md:ml-14">
                   <div className="flex items-center justify-between">
-                    <div className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
+                    <p className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
                       Trending
-                    </div>
+                    </p>
                     <div className="hidden md:block">
                       <div className="flex gap-4">
                         <img
@@ -66,8 +66,8 @@ const SearchModal: React.FC<ModalProps> = (props) => {
                           height={44}
                           alt="heart-icon"
                         />
-                        <img className="cursor-pointer" src={download} alt="" />
-                        <img className="cursor-pointer" src={save} alt="" />
+                        <img className="cursor-pointer" src={download} alt="download icon" />
+                        <img className="cursor-pointer" src={save} alt="save icon" />
                       </div>
                     </div>
                   </div>
@@ -76,17 +76,17 @@ const SearchModal: React.FC<ModalProps> = (props) => {
                   </div>
 
                   <div className="max-h-96 overflow-y-auto md:mr-9">
-                    <div className="text-[15px] font-normal font-poppins leading-normal">
+                    <p className="text-[15px] font-normal font-poppins leading-normal">
                       {article?.abstract}
-                    </div>
+                    </p>
                   </div>
                   <div className="flex flex-col gap-1 md:gap-6 pb-6 md:pb-0 mt-4 items-center md:flex-row">
-                    <div className="w-[94px] h-5 text-[13px] font-normal font-poppins leading-snug">
+                    <p className="w-[94px] h-5 text-[13px] font-normal font-poppins leading-snug">
                       {calculateTimeAgo(article?.pub_date ?? "")}
-                    </div>
-                    <div className="w-[210px] h-5 opacity-60 text-[13px] font-normal font-poppins leading-snug">
+                    </p>
+                    <p className="w-[210px] h-5 opacity-60 text-[13px] font-normal font-poppins leading-snug">
                       {article?.byline.original} | 4min read
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>

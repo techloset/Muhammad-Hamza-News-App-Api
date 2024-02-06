@@ -100,7 +100,7 @@ const Search: React.FC = () => {
             src={searchImg}
             width={20}
             onClick={handleSearch}
-            alt=""
+            alt="search icon"
           />
         </form>
       </div>
@@ -165,39 +165,39 @@ const Search: React.FC = () => {
                       )}
 
                       <div className="p-3 flex flex-col gap-3">
-                        <div className="text-zinc-800 text-lg font-semibold font-ibm-serif">
+                        <h1 className="text-zinc-800 text-lg font-semibold font-ibm-serif">
                           {truncateText(article.headline.main)}
-                        </div>
-                        <div className="text-zinc-800 text-md font-normal font-nunito-sans">
+                        </h1>
+                        <p className="text-zinc-800 text-md font-normal font-nunito-sans">
                           {truncateText(article.abstract)}
-                        </div>
+                        </p>
                       </div>
                     </div>
                     <div>
                       <div className="flex gap-7 my-4 px-3 font-poppins text-zinc-800 font-normal text-[13px]">
-                        <div className="leading-snug">
+                        <p className="leading-snug">
                           {calculateTimeAgo(article.pub_date)}
-                        </div>
-                        <div className="opacity-60 leading-snug">
+                        </p>
+                        <p className="opacity-60 leading-snug">
                           {article.byline.original} | 4min read
-                        </div>
+                        </p>
                       </div>
                       <hr />
                       <div className="flex justify-center items-center my-3 gap-5">
                         <div className="flex gap-1">
-                          <img src={heart} alt="" />
+                          <img src={heart} alt="heart icon" />
                           <p className="text-zinc-800 text-[10px] font-poppins font-medium">
                             28
                           </p>
                         </div>
                         <div className="flex gap-1">
-                          <img src={download} width={13} alt="" />
+                          <img src={download} width={13} alt="download icon" />
                           <p className="text-zinc-800 text-[10px] font-poppins font-medium">
                             72
                           </p>
                         </div>
                         <div>
-                          <img src={save} width={13} alt="" />
+                          <img src={save} width={13} alt="save icon" />
                         </div>
                       </div>
                     </div>

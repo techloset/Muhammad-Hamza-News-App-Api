@@ -40,19 +40,19 @@ const ArticleModal: React.FC<ModalProps> = (props) => {
                   className="absolute top-1 right-1 md:top-0 md:right-0 opacity-70 w-6 md:w-10 cursor-pointer"
                   onClick={handleCloseModal}
                 >
-                  <img src={crossImg} alt="" />
+                  <img src={crossImg} alt="cross icon" />
                 </div>
 
                 <img
                   className="w-full rounded-md h-60 md:h-96 object-cover"
-                  alt=""
+                  alt="artical image"
                   src={article?.media[0]["media-metadata"][2].url}
                 />
                 <div className="relative max-w-auto my-5 md:ml-14">
                   <div className="flex items-center justify-between">
-                    <div className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
+                    <p className="text-red-700 text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
                       Trending
-                    </div>
+                    </p>
                     <div className="hidden md:block">
                       <div className="flex gap-4">
                         <img
@@ -61,8 +61,8 @@ const ArticleModal: React.FC<ModalProps> = (props) => {
                           height={44}
                           alt="heartIcon"
                         />
-                        <img className="cursor-pointer" src={download} alt="" />
-                        <img className="cursor-pointer" src={save} alt="" />
+                        <img className="cursor-pointer" src={download} alt="download icon" />
+                        <img className="cursor-pointer" src={save} alt="save icon" />
                       </div>
                     </div>
                   </div>
@@ -71,17 +71,17 @@ const ArticleModal: React.FC<ModalProps> = (props) => {
                   </div>
 
                   <div className="max-h-96 overflow-y-auto md:mr-9">
-                    <div className="text-[15px] font-normal font-poppins leading-normal">
+                    <p className="text-[15px] font-normal font-poppins leading-normal">
                       {article?.abstract}
-                    </div>
+                    </p>
                   </div>
                   <div className="flex flex-col gap-1 md:gap-6 pb-6 md:pb-0 mt-4 items-center font-poppins md:flex-row">
-                    <div className="w-[94px] h-5 text-[13px] font-normal leading-snug">
+                    <p className="w-[94px] h-5 text-[13px] font-normal leading-snug">
                       {calculateTimeAgo(article?.published_date ?? "")}
-                    </div>
-                    <div className="w-[210px] h-5 opacity-60 text-[13px] font-normal leading-snug">
+                    </p>
+                    <p className="w-[210px] h-5 opacity-60 text-[13px] font-normal leading-snug">
                       {article?.byline} | 4min read
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>

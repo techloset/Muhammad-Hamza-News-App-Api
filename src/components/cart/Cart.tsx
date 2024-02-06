@@ -127,39 +127,39 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
                   )}
 
                   <div className="px-4 flex flex-col gap-3">
-                    <div className="text-zinc-800 text-lg font-semibold font-ibm-serif">
+                    <h1 className="text-zinc-800 text-lg font-semibold font-ibm-serif">
                       {article.title}
-                    </div>
-                    <div className="text-zinc-800 text-md font-normal font-nunito-sans">
+                    </h1>
+                    <p className="text-zinc-800 text-md font-normal font-nunito-sans">
                       {truncateText(article.abstract)}
-                    </div>
+                    </p>
                   </div>
                 </div>
                 <div>
                   <div className="flex gap-7 my-4 px-4">
-                    <div className="text-zinc-800 text-[13px] font-normal font-poppins leading-snug">
+                    <p className="text-zinc-800 text-[13px] font-normal font-poppins leading-snug">
                       {calculateTimeAgo(article.published_date)}
-                    </div>
-                    <div className="opacity-60 text-zinc-800 text-[13px] font-normal font-poppins leading-snug">
+                    </p>
+                    <p className="opacity-60 text-zinc-800 text-[13px] font-normal font-poppins leading-snug">
                       {article.byline} | 4min read
-                    </div>
+                    </p>
                   </div>
                   <hr />
                   <div className="flex justify-center items-center my-3 gap-5">
                     <div className="flex gap-1">
-                      <img src={heart} alt="" />
+                      <img src={heart} alt="heart icon" />
                       <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">
                         28
                       </p>
                     </div>
                     <div className="flex gap-1">
-                      <img src={download} width={13} alt="" />
+                      <img src={download} width={13} alt="download icon" />
                       <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">
                         72
                       </p>
                     </div>
                     <div>
-                      <img src={save} width={13} alt="" />
+                      <img src={save} width={13} alt="save icon" />
                     </div>
                   </div>
                 </div>

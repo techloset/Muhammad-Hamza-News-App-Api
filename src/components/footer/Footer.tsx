@@ -25,7 +25,7 @@ const Footer = () => {
           <FooterList>
             <div className="flex flex-col items-center gap-3 lg:gap-7">
               <div className="cursor-pointer">
-                <img src={logo} alt="" />
+                <img src={logo} alt="logo icon" />
               </div>
               <div className="text-gray-400 text-xs font-normal">
                 copyright © {new Date().getFullYear()} | NBC NEWS
@@ -36,9 +36,9 @@ const Footer = () => {
           <div className="hidden lg:block text-[15px]">
             {list1.map((item, i) => {
               return (
-                <h2 className="cursor-pointer" key={i}>
+                <h3 className="cursor-pointer" key={i}>
                   {item}
-                </h2>
+                </h3>
               );
             })}
           </div>
@@ -48,9 +48,9 @@ const Footer = () => {
               <div className="flex flex-col lg:flex-row justify-center  text-center gap-1 lg:gap-7">
                 {list2.map((item, i) => {
                   return (
-                    <h2 className="cursor-pointer" key={i}>
+                    <h3 className="cursor-pointer" key={i}>
                       {item}
-                    </h2>
+                    </h3>
                   );
                 })}
               </div>

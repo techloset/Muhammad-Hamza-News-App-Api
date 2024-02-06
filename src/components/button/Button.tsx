@@ -2,7 +2,7 @@ interface ButtonProps {
   text: string;
   disabled?: boolean;
   outline?: boolean;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Button: React.FC<ButtonProps> = ({

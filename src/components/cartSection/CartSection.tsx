@@ -39,18 +39,18 @@ const CartSection: React.FC = () => {
         <div className="flex gap-6 md:gap-9 mx-3 md:mx-0 text-zinc-800 text-lg font-semibold font-poppins">
          {
             categories.map((category, index) => (
-              <div
+              <h2
                 key={index}
                 className={`cursor-pointer ${selectedCategory === category.name ? "border-b-4 border-red-500" : ""}`}
                 onClick={() => handleCategoryClick(category.name)}
               >
                 {category.title}
-              </div>
+              </h2>
             ))
          }
         </div>
         <div className="hidden md:block cursor-pointer">
-          <img src={menu2} alt="" />
+          <img src={menu2} alt="menu icon" />
         </div>
       </div>
       <Cart initialDisplayCount={6} selectedCategory={selectedCategory} />
