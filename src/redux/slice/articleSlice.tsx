@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import axios, { AxiosResponse } from "axios";
-import Instance from "../../instance/Instance";
+import Instance from "../../utility/Instance";
 
 export interface articleState {
   data: Article[] | null;

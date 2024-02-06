@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios, { AxiosError, AxiosResponse } from "axios";
-import Instance from "../../instance/Instance";
+import Instance from "../../utility/Instance";
 
 export interface SearchState {
   searchResults: SearchResponse[] | null;
