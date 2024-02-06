@@ -1,4 +1,4 @@
-import menu2 from "../../assets/images/menu2.png";
+import menu2 from "../../assets/images/menu2.svg";
 import React, { useState, useEffect } from "react";
 import Cart from "../../components/cart/Cart";
 import { useAppSelector } from "../../redux/hooks";

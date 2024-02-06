@@ -1,11 +1,11 @@
 import React from "react";
 import Container from "../container/Container";
 import FooterList from "./FooterList";
-import logo from "../../assets/images/logo2.png";
-import wifi from "../../assets/images/wifi.png";
-import twitter from "../../assets/images/twitter.png";
-import reddit from "../../assets/images/reddit.png";
-import facebook from "../../assets/images/facebook.png";
+import logo from "../../assets/images/logo2.svg";
+import wifi from "../../assets/images/wifi.svg";
+import twitter from "../../assets/images/twitter.svg";
+import reddit from "../../assets/images/reddit.svg";
+import facebook from "../../assets/images/facebook.svg";
 
 const list1 = [
   "Privacy Policy",

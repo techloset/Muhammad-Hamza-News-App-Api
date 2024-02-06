@@ -1,5 +1,5 @@
 import Container from "../container/Container";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import forward from "../../assets/images/forwardIcon.svg";
 import people from "../../assets/images/peopleIcon.svg";
 import search from "../../assets/images/searchIcon.svg";
