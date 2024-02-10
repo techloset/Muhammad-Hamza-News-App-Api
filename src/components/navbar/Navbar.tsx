@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Container from "../container/Container";
 import logo from "../../assets/images/logo.svg";
 import forward from "../../assets/images/forwardIcon.svg";
@@ -5,11 +6,19 @@ import people from "../../assets/images/peopleIcon.svg";
 import search from "../../assets/images/searchIcon.svg";
 import menu from "../../assets/images/menuIcon.svg";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import crossIcon from "../../assets/images/crossIcon.svg";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
+    null
+  );
+
+  useEffect(() => {
+    
+    setSelectedItemIndex(0);
+  }, []);
+
 
   const links = [
     "Corona Update",
@@ -24,6 +33,11 @@ const Navbar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const handleItemClick = (index: number) => {
+    setSelectedItemIndex(index);
+  };
+
   return (
     <>
       <div className="sticky top-0 w-full bg-white z-30 shadow-md">
@@ -34,10 +48,14 @@ const Navbar = () => {
                 <img className="w-[49.33px] h-10" alt="logo" src={logo} />
               </Link>
               <div className={"hidden lg:block"}>
-                <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-14 text-zinc-800 text-base font-semibold font-nunito-sans">
+                <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-14 2xl:gap-20 text-customBlack text-base font-semibold font-nunito-sans">
                   {links.map((link, index) => (
-                    <li key={index} className="cursor-pointer">
+                    <li key={index} className="cursor-pointer relative"
+                    onClick={() => handleItemClick(index)}>
                       {link}
+                      {selectedItemIndex === index && (
+                        <span className="absolute left-[-15px] top-2 w-2 h-2 bg-customRed rounded-full"></span>
+                      )}
                     </li>
                   ))}
                   <li className="cursor-pointer">

@@ -3,15 +3,3 @@
   display: none;
 }
 
-* {
-  scrollbar-width: none;
-  scrollbar-color: transparent transparent;
-}
-
-*::-webkit-scrollbar {
-  width: 12px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}

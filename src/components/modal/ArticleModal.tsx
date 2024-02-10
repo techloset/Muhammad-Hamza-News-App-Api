@@ -32,12 +32,12 @@ const ArticleModal: React.FC<ModalProps> = (props) => {
             onClick={handleCloseModal}
           >
             <div
-              className="mx-auto max-w-6xl relative flex max-h-[550px] md:max-h-[600px] border-0 rounded-lg bg-white w-full overflow-y-auto outline-none focus:outline-none"
+              className="mx-auto max-w-6xl relative flex max-h-[550px] md:max-h-[600px] border-0 rounded-2xl bg-white w-full overflow-y-auto outline-none focus:outline-none"
               onClick={handleModalClick}
             >
               <div className="grid md:grid-cols-2 pt-8 px-4 md:p-8 items-center">
                 <div
-                  className="absolute top-1 right-1 md:top-0 md:right-0 opacity-70 w-6 md:w-10 cursor-pointer"
+                  className="absolute top-1 right-1 md:top-2 md:right-2 opacity-70 w-6 h-6 md:w-9 md:h-9 hover:bg-zinc-200 rounded-full cursor-pointer"
                   onClick={handleCloseModal}
                 >
                   <img src={crossImg} alt="cross icon" />

@@ -39,7 +39,7 @@ const SearchModal: React.FC<ModalProps> = (props) => {
             >
               <div className="grid md:grid-cols-2 pt-8 px-4 md:p-8 items-center">
                 <div
-                  className="absolute top-1 right-1 md:top-0 md:right-0 opacity-70 w-6 md:w-10 cursor-pointer"
+                  className="absolute top-1 right-1 md:top-2 md:right-2 opacity-70 w-6 h-6 md:w-9 md:h-9 hover:bg-zinc-200 rounded-full cursor-pointer"
                   onClick={handleCloseModal}
                 >
                   <img src={crossImg} alt="" />

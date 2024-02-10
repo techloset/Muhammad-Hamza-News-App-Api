@@ -103,7 +103,7 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
               <div
                 key={article.id}
                 onClick={() => handleArticleClick(article)}
-                className="flex flex-col justify-between h-full col-span-1 cursor-pointer bg-white hover:scale-105 border border-gray-200 rounded-md overflow-hidden"
+                className="flex flex-col justify-between h-full col-span-1 cursor-pointer shadow-lg shadow-[rgba(42, 42, 42, 0.24)]  bg-white hover:scale-105 border border-gray-200 rounded-md overflow-hidden"
               >
                 <div className="flex flex-col gap-3">
                   {article.media &&
@@ -127,20 +127,20 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
                   )}
 
                   <div className="px-4 flex flex-col gap-3">
-                    <h1 className="text-zinc-800 text-lg font-semibold font-ibm-serif">
+                    <h1 className="text-customBlack text-lg font-semibold font-ibm-serif">
                       {article.title}
                     </h1>
-                    <p className="text-zinc-800 text-md font-normal font-nunito-sans">
+                    <p className="text-customBlack text-md font-normal font-nunito-sans">
                       {truncateText(article.abstract)}
                     </p>
                   </div>
                 </div>
                 <div>
                   <div className="flex gap-7 my-4 px-4">
-                    <p className="text-zinc-800 text-[13px] font-normal font-poppins leading-snug">
+                    <p className="text-customBlack text-[13px] font-normal font-poppins leading-snug">
                       {calculateTimeAgo(article.published_date)}
                     </p>
-                    <p className="opacity-60 text-zinc-800 text-[13px] font-normal font-poppins leading-snug">
+                    <p className="opacity-60 text-customBlack text-[13px] font-normal font-poppins leading-snug">
                       {article.byline} | 4min read
                     </p>
                   </div>
@@ -148,13 +148,13 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
                   <div className="flex justify-center items-center my-3 gap-5">
                     <div className="flex gap-1">
                       <img src={heart} alt="heart icon" />
-                      <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">
+                      <p className="opacity-70 text-customBlack text-[10px] font-medium font-poppine">
                         28
                       </p>
                     </div>
                     <div className="flex gap-1">
                       <img src={download} width={13} alt="download icon" />
-                      <p className="opacity-70 text-zinc-800 text-[10px] font-medium font-poppine">
+                      <p className="opacity-70 text-customBlack text-[10px] font-medium font-poppine">
                         72
                       </p>
                     </div>

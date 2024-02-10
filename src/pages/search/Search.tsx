@@ -138,7 +138,7 @@ const Search: React.FC = () => {
                   <div
                     key={article._id}
                     onClick={() => handleArticleClick(article)}
-                    className="flex flex-col justify-between h-full col-span-1 cursor-pointer bg-white hover:scale-105 border border-gray-200 rounded-md overflow-hidden"
+                    className="flex flex-col justify-between h-full col-span-1 cursor-pointer shadow-lg shadow-[rgba(42, 42, 42, 0.24)] bg-white hover:scale-105 border border-gray-200 rounded-md overflow-hidden"
                   >
                     <div className="flex flex-col gap-2">
                       {article.multimedia &&
