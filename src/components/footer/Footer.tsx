@@ -32,10 +32,10 @@ const Footer = () => {
             </div>
           </FooterList>
 
-          <div className="hidden lg:block text-[15px]">
+          <div className="hidden lg:block">
             {list1.map((item, i) => {
               return (
-                <h3 className="cursor-pointer mb-3 2xl:mb-4" key={i}>
+                <h3 className="cursor-pointer font-poppins text-[15px] font-[500] mb-3 2xl:mb-4" key={i}>
                   {item}
                 </h3>
               );
