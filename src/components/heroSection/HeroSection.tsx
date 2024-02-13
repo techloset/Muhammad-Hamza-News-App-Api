@@ -35,7 +35,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="text-white md:text-customBlack absolute top-[270px] sm:top-[300px] md:top-0 md:relative px-6 sm:px-20 md:px-0 my-0 md:my-4">
+            <div className="text-white md:text-customBlack absolute top-[280px] sm:top-[300px] md:top-0 md:relative px-6 sm:px-20 md:px-0 my-0 md:my-4">
               <h1 className="text-[24px] md:text-[20px] lg:text-[32px] font-semibold font-ibm-serif md:mr-9">
                 Cake meme reflects coronavirus absurdity in a world where
                 nothing is what it seems
