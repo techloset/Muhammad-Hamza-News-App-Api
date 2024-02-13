@@ -9,15 +9,15 @@ const HeroSection = () => {
   return (
     <>
       <Container>
-        <div className="grid md:grid-cols-2 my-0 md:my-10 items-center relative">
-          <div className="md:hidden absolute inset-0 bg-gradient-to-b from-transparent to-zinc-800"></div>
+        <div className="grid md:grid-cols-2 2xl:grid-cols-9 my-0 md:my-10 items-center relative">
+          <div className="md:hidden absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
           <img
-            className="w-full min-h-[350px] 2xl:min-h-[500px] 2xl:min-w-[750px] rounded-md object-cover"
+            className="w-full md:col-span-1 2xl:col-span-5 min-h-[456px] xl:h-[400px] xl:w-[550px] 2xl:h-[500px] 2xl:w-[750px] md:h:[356px] md:w-[450px] rounded-md object-cover"
             alt=""
             src={homeImg}
           />
 
-          <div className="max-w-auto md:ml-16">
+          <div className="max-w-auto md:col-span-1 2xl:col-span-4 md:pl-12 2xl:pl-16">
             <div className="hidden md:block">
               <div className="flex items-center justify-between">
                 <p className="text-customRed text-sm font-semibold font-poppins leading-[29.40px] tracking-tight">
@@ -35,8 +35,8 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div className="text-white md:text-customBlack absolute top-[190px] sm:top-[350px] md:top-0 md:relative px-6 sm:px-20 md:px-0 my-0 md:my-4">
-              <h1 className="text-2xl md:text-[20px] lg:text-[32px] font-semibold font-ibm-serif md:mr-9">
+            <div className="text-white md:text-customBlack absolute top-[270px] sm:top-[300px] md:top-0 md:relative px-6 sm:px-20 md:px-0 my-0 md:my-4">
+              <h1 className="text-[24px] md:text-[20px] lg:text-[32px] font-semibold font-ibm-serif md:mr-9">
                 Cake meme reflects coronavirus absurdity in a world where
                 nothing is what it seems
               </h1>

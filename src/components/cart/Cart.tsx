@@ -94,7 +94,7 @@ const Cart: React.FC<CartProps & { selectedCategory: string }> = ({
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] mx-auto xl:px-28 md:px-16 sm:px-10 px-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] mx-auto 2xl:px-[277px] xl:px-36 md:px-16 sm:px-10 px-4 gap-8">
         {articles &&
           articles
             .filter(filterArticles)

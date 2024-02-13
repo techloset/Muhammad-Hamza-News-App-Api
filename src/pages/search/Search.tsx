@@ -14,6 +14,7 @@ import download from "../../assets/images/download.svg";
 import save from "../../assets/images/save.svg";
 import Button from "../../components/button/Button";
 import SearchModal from "../../components/modal/SearchModal";
+import Container from "../../components/container/Container";
 
 export function mergeUrl(baseUrl: string, relativePath: string) {
   const base = new URL(baseUrl);
@@ -82,7 +83,7 @@ const Search: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center h-[80vh] gap-12">
+      <div className="flex flex-col justify-center items-center h-[60vh] md:h[80vh] gap-12">
         <div className="text-zinc-800 text-3xl md:text-4xl lg:text-5xl font-ibm-serif font-semibold">
           Search News
         </div>
@@ -93,7 +94,7 @@ const Search: React.FC = () => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-70 sm:w-[400px] md:w-[550px] lg:w-[800px] py-4 bg-white bg-opacity-90 pr-4 pl-14 cursor-pointer border-slate-400 text-zinc-800 font-nunito-sans focus:border-slate-300"
+            className=" w-72 sm:w-[500px] md:w-[550px] lg:w-[800px] py-4 bg-white bg-opacity-90 pr-4 pl-14 cursor-pointer border-slate-400 text-zinc-800 font-nunito-sans focus:border-slate-300"
           />
           <img
             className="absolute left-4 top-1/2 transform -translate-y-1/2"
@@ -127,12 +128,14 @@ const Search: React.FC = () => {
     
         {!isLoading && !isError && searchResults && (
           <>
-            <div className="flex justify-between items-center h-[54px] bg-white mb-3 max-w-[1920px] mx-0 xl:mx-28 md:mx-16 px-3 bg-opacity-90 backdrop-blur-[28px]">
+            <Container>
+            <div className="flex justify-between items-center h-[54px] bg-white mb-3 px-3 bg-opacity-90 backdrop-blur-[28px]">
               <div className=" text-zinc-800 text-lg font-semibold font-poppins mx-3">
                 Search Results
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] mx-auto xl:px-28 md:px-16 sm:px-10 px-4 gap-8">
+            </Container>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] mx-auto 2xl:px-[277px] xl:px-36 md:px-16 sm:px-10 px-4 gap-8">
               {searchResults &&
                 searchResults.slice(0, displayCount).map((article) => (
                   <div

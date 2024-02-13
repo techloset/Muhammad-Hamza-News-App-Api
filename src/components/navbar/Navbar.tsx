@@ -48,7 +48,7 @@ const Navbar = () => {
                 <img className="w-[49.33px] h-10" alt="logo" src={logo} />
               </Link>
               <div className={"hidden lg:block"}>
-                <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-14 2xl:gap-20 text-customBlack text-base font-semibold font-nunito-sans">
+                <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-10 2xl:gap-12 text-customBlack text-base font-semibold font-nunito-sans">
                   {links.map((link, index) => (
                     <li key={index} className="cursor-pointer relative"
                     onClick={() => handleItemClick(index)}>

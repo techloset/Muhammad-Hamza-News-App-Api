@@ -32,7 +32,7 @@ const ArticleModal: React.FC<ModalProps> = (props) => {
             onClick={handleCloseModal}
           >
             <div
-              className="mx-auto max-w-6xl relative flex max-h-[550px] md:max-h-[600px] border-0 rounded-2xl bg-white w-full overflow-y-auto outline-none focus:outline-none"
+              className="mx-auto md:max-w-5xl 2xl:max-w-7xl relative flex max-h-[930px] md:max-h-[600px] border-0 rounded-2xl bg-white w-full overflow-y-auto outline-none focus:outline-none"
               onClick={handleModalClick}
             >
               <div className="grid md:grid-cols-2 pt-8 px-4 md:p-8 items-center">
@@ -44,7 +44,7 @@ const ArticleModal: React.FC<ModalProps> = (props) => {
                 </div>
 
                 <img
-                  className="w-full rounded-md h-60 md:h-96 object-cover"
+                  className="w-full rounded-md h-[347px] md:h-96 object-cover"
                   alt="artical image"
                   src={article?.media[0]["media-metadata"][2].url}
                 />
